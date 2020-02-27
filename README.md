@@ -7,8 +7,7 @@ Demo: https://gpapconv.frafra.eu/
 ## Dependencies
 
 - [Python 3](https://www.python.org/)
-  - [hug](http://www.hug.rest/)
-  - [uWSGI](https://uwsgi-docs.readthedocs.io/)
+  - [FastAPI](https://fastapi.tiangolo.com/)
   - [Poetry](poetry.eustace.io/)
 - [sqlite](https://sqlite.org/)
 
@@ -18,7 +17,7 @@ Demo: https://gpapconv.frafra.eu/
 
 ```
 $ poetry install --no-root --no-dev
-$ poetry run uwsgi --ini uwsgi.ini
+$ poetry run uvicorn gpapconv:app
 ```
 
 ### Docker image
