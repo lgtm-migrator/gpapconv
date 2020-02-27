@@ -24,9 +24,7 @@ def run_query_on_form(file, query_name):
         return run_query_on_db(tf.name, query_name)
 
 def generate_filename(extension):
-    filename = 'geopap-{}.{}'.format(datetime.date.today(), extension)
-    content_disposition = 'attachment; filename="{}"'.format(filename)
-    return filename
+    return 'geopap-{}.{}'.format(datetime.date.today(), extension)
 
 app = FastAPI()
 app.mount("/", StaticFiles(directory="web"), name="web")
